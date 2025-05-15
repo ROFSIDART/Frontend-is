@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* увеличение кнопок при наведении. */
 header {
   a {
     transition: all 0.25s ease-in;
@@ -11,12 +12,15 @@ header {
     margin: 0 1em 0;
     padding: 4px 10px;
     transform: scale(1.2);
-    border: 1.5px solid #80be4d;
+    animation: animation_RGB 5s ease infinite;
+    border: 1.5px double #ffffff;
+    font-weight: bold;
     border-radius: 20px;
     color: #ffffff;
   }
 }
 
+/* анимация для слова фронтенд */
 #frontend_is {
   h3 {
     border-radius: 1em;
@@ -61,6 +65,7 @@ header {
   }
 }
 
+/* зеленая анмация рамки */
 @keyframes border_RGB {
   0% {
     border: 1px solid #000000;
@@ -76,6 +81,7 @@ header {
   }
 }
 
+/* добавление анимации рамок для направлений в фронтенде */
 #direction {
   #article-1 {
     animation: border_RGB 5s ease infinite;
@@ -91,7 +97,7 @@ header {
   #article-4 {
     animation: border_RGB 5.3s ease infinite;
   }
-
+/* анимация при наведении  */
   p {
     transition: all 0.25s ease-in;
   }

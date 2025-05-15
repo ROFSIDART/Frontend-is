@@ -18,10 +18,14 @@ header {
     grid-template-columns: repeat(5, auto);
     justify-content: center;
 
-    background-image: url(../img/matrix.jpg);
+    /* background-image: url(../img/matrix.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
+    картинка на фоне нафигации */
+
+    background: #000000c2;
+    border: 1px solid #c0c2cc;
     border-radius: 0 0 5em 5em;
   }
   li {
