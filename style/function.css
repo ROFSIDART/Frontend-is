@@ -1,0 +1,104 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  a {
+    transition: all 0.25s ease-in;
+  }
+
+  a:hover {
+    margin: 0 1em 0;
+    padding: 4px 10px;
+    transform: scale(1.2);
+    border: 1.5px solid #80be4d;
+    border-radius: 20px;
+    color: #ffffff;
+  }
+}
+
+#frontend_is {
+  h3 {
+    border-radius: 1em;
+    padding: 0.1em 0.2em;
+    transition: all 0.25s ease-in;
+    animation: animation_RGB 5s ease infinite;
+  }
+
+  h3:hover {
+    padding: 0 0.3em;
+    font-size: 1.5em;
+  }
+}
+
+/* радужная анимация  */
+@keyframes animation_RGB {
+  0% {
+    background: none;
+  }
+  10% {
+    background-color: #c21414;
+    color: #ffffff;
+  }
+  30% {
+    background-color: #cfc20d;
+    color: #000;
+  }
+  50% {
+    background-color: #3dc214;
+    color: #000;
+  }
+  60% {
+    background-color: #146ec2;
+    color: #ffffff;
+  }
+  80% {
+    background-color: #6e14c2;
+    color: #ffffff;
+  }
+  100% {
+    background-color: #c21497;
+  }
+}
+
+@keyframes border_RGB {
+  0% {
+    border: 1px solid #000000;
+  }
+  70% {
+    border: 1px solid #ffffff;
+  }
+  90% {
+    border: 1px solid #1eff00;
+  }
+  100% {
+    border: 1px solid #273a1b;
+  }
+}
+
+#direction {
+  #article-1 {
+    animation: border_RGB 5s ease infinite;
+  }
+
+  #article-2 {
+    animation: border_RGB 5.1s ease infinite;
+  }
+
+  #article-3 {
+    animation: border_RGB 5.2s ease infinite;
+  }
+  #article-4 {
+    animation: border_RGB 5.3s ease infinite;
+  }
+
+  p {
+    transition: all 0.25s ease-in;
+  }
+  p:hover {
+    margin: 1em;
+    padding: 0.1em 0.5em;
+    transform: scale(1.1);
+  }
+}
+

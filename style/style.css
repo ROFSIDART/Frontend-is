@@ -1,0 +1,105 @@
+body {
+  color: #f7f4f4;
+  background: #1d1c1c;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+/* навигационная панель */
+header {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+
+    background-image: url(../img/matrix.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 0 5em 5em;
+  }
+  li {
+    padding: 5px;
+    display: grid;
+    a {
+      border: 1.5px solid #6e6e6e /*..кто правит того и травят бебебе*/;
+      border-radius: 5px;
+      color: #c0c2cc;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 2px;
+    }
+  }
+  ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  nav {
+    margin: 0 0 4em;
+  }
+}
+
+/* картинки под навигацией / типо заголовок */
+#img_header {
+  display: grid;
+  /* height: 160px; */
+  grid-template-columns: 1.4fr 0.7fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #eto_vso {
+    margin: 0 0 1em;
+  }
+  #chtotividish {
+    margin: 0 0 0.5em;
+  }
+
+  #v_internete {
+    margin: 0 0 0 5em;
+    width: 60%;
+  }
+}
+
+/* определение фронтенд в виде лока */
+#frontend_is {
+  border: 1.5px solid #c0c2cc;
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1em;
+  h3,
+  p {
+    display: inline;
+  }
+}
+
+/* блок направление фронтенд */
+.direction {
+  margin: 1em 0 0.5em;
+}
+#direction {
+  margin: 0 1em 1em;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 1em;
+
+  text-align: center;
+  article {
+    border-radius: 3em;
+    padding: 0.5em;
+    /* border: 1px solid #696969; */
+  }
+}
