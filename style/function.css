@@ -13,7 +13,7 @@ header {
     padding: 4px 10px;
     transform: scale(1.2);
     animation: animation_RGB 5s ease infinite;
-    border: 1.5px double #ffffff;
+    border: 1.5px solid #ffffff;
     font-weight: bold;
     border-radius: 20px;
     color: #ffffff;
@@ -97,7 +97,7 @@ header {
   #article-4 {
     animation: border_RGB 5.3s ease infinite;
   }
-/* анимация при наведении  */
+  /* анимация при наведении  */
   p {
     transition: all 0.25s ease-in;
   }
@@ -108,3 +108,9 @@ header {
   }
 }
 
+.testimonials .btn:hover {
+background-color: #ffffff;
+cursor: pointer;
+transform: scale(1.2);
+font-size: x-large;
+}
