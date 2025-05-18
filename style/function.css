@@ -7,6 +7,7 @@ header {
   a {
     transition: all 0.25s ease-in;
   }
+.navigation-desctop {
 
   a:hover {
     margin: 0 1em 0;
@@ -18,6 +19,7 @@ header {
     border-radius: 20px;
     color: #ffffff;
   }
+}
 }
 
 /* анимация для слова фронтенд */
@@ -81,6 +83,12 @@ header {
   }
 }
 
+@keyframes opticy {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+
+}
+
 /* добавление анимации рамок для направлений в фронтенде */
 #direction {
   #article-1 {
@@ -109,8 +117,132 @@ header {
 }
 
 .testimonials .btn:hover {
-background-color: #ffffff;
-cursor: pointer;
-transform: scale(1.2);
-font-size: x-large;
+  background-color: #ffffff;
+  cursor: pointer;
+  transform: scale(1.2);
+  font-size: x-large;
+}
+
+/* адаптация под разные экраны */
+@media (min-width: 431px) {
+  .navigation-mobail {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .navigation-desctop {
+    display: none;
+  }
+
+  .navigation-mobail {
+    button{
+      div {
+        display: none;
+      }
+    }
+    button:focus {
+      opacity: 100%;
+      div {
+        display: block;
+        animation: opticy 1s ease-out 1;
+      }
+      
+    }
+    a:hover {
+      background-color: #6ec201;
+      color: #000;
+    }
+  }
+  #img_header {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #chtotividish {
+      width: auto;
+      margin: 0;
+    }
+
+    #v_internete {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  #frontend_is {
+    border: 1px solid #c0c2cc;
+    border-radius: 2em;
+    padding: 1em;
+    margin: 4em 1em 1em;
+
+    h3,
+    p {
+      font-size: 80%;
+      display: inline;
+    }
+
+    h3:hover {
+      padding: 0 0.3em;
+      font-size: 100%;
+    }
+  }
+  .direction {
+    font-size: large;
+  }
+  .container-direction {
+    background-color: #3a3d42;
+    border-radius: 1rem;
+    padding: 0;
+
+    #direction {
+      grid-template-columns: repeat(4, 60%);
+      margin: 0;
+    }
+
+    .scroller-direction {
+      padding: 1em;
+      display: flex;
+      overflow: hidden;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+
+    article {
+      font-size: 80%;
+      scroll-snap-align: center;
+    }
+  }
+
+  .eyes {
+    scale: 0.5;
+    margin: 0 0 5em;
+  }
+
+  #where_to_work {
+    font-size: large;
+  }
+  .where_to_work {
+    .where_to_work-p {
+      margin: -1em 0 1.5em;
+      font-size: 70%;
+    }
+  }
+
+  .testimonials {
+    font-size: 80%;
+    min-width: 100%;
+  }
+
+  .personality-container {
+    font-size: 50%;
+    grid-template-columns:  1fr;
+    grid-template-rows: auto;
+  }
 }
