@@ -14,7 +14,7 @@ h2 {
 
 /* навигационная панель */
 header {
-  .navigation-desctop {
+  .navigation-desktop {
     margin: 0 0 4em;
     ul {
       list-style-type: none;
@@ -22,9 +22,20 @@ header {
       padding: 1%;
       box-sizing: border-box;
 
-      display: grid;
-      grid-template-columns: repeat(5, auto);
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
       justify-content: center;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
       background: #000000c2;
       border: 1px solid #c0c2cc;
@@ -32,9 +43,13 @@ header {
     }
     li {
       padding: 5px;
-      display: grid;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
       a {
-        border: 1.5px solid #6e6e6e /*..кто правит того и травят бебебе*/;
+        border: 1.5px solid #6e6e6e;
         border-radius: 5px;
         color: #c0c2cc;
         text-decoration: none;
@@ -49,7 +64,7 @@ header {
     }
   }
 
-  .navigation-mobail {
+  .navigation-mobile {
     z-index: 1;
   
     button {
@@ -65,49 +80,74 @@ header {
       opacity: 80%;
 
       position: fixed;
-    bottom: 0;
-    left: 1;
-    right: 0;
+      bottom: 0;
+      left: 1;
+      right: 0;
     }
-   div { 
-    position: absolute;
-    bottom: 0;
-    left: 1;
-    right: 0;
-   }
+    div { 
+      position: absolute;
+      bottom: 0;
+      left: 1;
+      right: 0;
+    }
 
     ul {
       list-style-type: none;
-
       box-sizing: border-box;
-      display: grid;
-      grid-template-columns: 1fr;
-      justify-content: end;
-    
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: end;
+      -moz-box-pack: end;
+      -ms-flex-pack: end;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
     }
 
     li {
-      display: grid;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
     }
     a {
       padding: 10px;
       background-color: #000;
-      white-space: nowrap ;
+      white-space: nowrap;
       text-align: right;
       text-decoration: none;
       color: #ffffff;
       font-family: 'Arial Narrow Bold', sans-serif;
     }
   }
-
 }
 
 /* картинки под навигацией / типо заголовок */
 #img_header {
-  display: grid;
-  grid-template-columns: 1.4fr 0.7fr 1fr;
-  grid-template-rows: 1fr;
-  align-items: end;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 
   img {
     max-width: 100%;
@@ -127,7 +167,6 @@ header {
   }
 }
 
-
 /* определение фронтенд в виде лока */
 #frontend_is {
   border: 1.5px solid #c0c2cc;
@@ -146,9 +185,20 @@ header {
 #direction {
   margin: 0 1em 1em;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   gap: 1em;
 
   text-align: center;
@@ -156,14 +206,21 @@ header {
     border-radius: 3em;
     padding: 0.5em;
     border: 1px solid #000000;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 200px;
+    -moz-flex: 1 1 200px;
+    -ms-flex: 1 1 200px;
+    flex: 1 1 200px;
+    max-width: 300px;
   }
 }
 
 /* блок с тем, где работают фронтенд разрабы */
 .where_to_work {
   p {
-        font-family: 'Arial Narrow', Arial, sans-serif;
-color: #b2b3b8
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    color: #b2b3b8;
   }
   h3 {
     color: #59ee03;
@@ -199,7 +256,13 @@ color: #b2b3b8
     text-align: center;
     font-weight: bold;
 
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
   }
 
@@ -211,52 +274,75 @@ color: #b2b3b8
     border-radius: 5rem 0 0 5rem;
     right: 50.5%;
   }
-  /* блоки с текстом о рабте  */
+
+  /* блоки с текстом о работе */
   .scroller {
     padding: 1.5rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     overflow: hidden;
+    -webkit-scroll-snap-type: x mandatory;
+    -moz-scroll-snap-type: x mandatory;
+    -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
   }
   .block {
     min-width: 100%;
     min-height: 100px;
     margin: 0.5em;
-
+    -webkit-scroll-snap-align: center;
+    -moz-scroll-snap-align: center;
+    -ms-scroll-snap-align: center;
     scroll-snap-align: center;
   }
-
-
 }
 
-/* Личностные качества  */
+/* Личностные качества */
 .personality {
- margin: -1.3em 0 0;
- 
- .personality-container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
+  margin: -1.3em 0 0;
+  
+  .personality-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
     gap: 10px;
   }
   article {
-  word-break: break-all;
-  padding: 2em;
-  text-align: left;
-  padding: 1em;
-  border: 1px solid #9d9ea7;
-  
-}
-  
+    word-break: break-all;
+    padding: 1em;
+    text-align: left;
+    border: 1px solid #9d9ea7;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 300px;
+    -moz-flex: 1 1 300px;
+    -ms-flex: 1 1 300px;
+    flex: 1 1 300px;
+    max-width: 400px;
+  }
 
-h4, p {
-  display: inline;
-}
-p, strong {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #bcbdc4;
-}
-h4{
-font-size: larger;
-}
-}
+  h4, p {
+    display: inline;
+  }
+  p, strong {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #bcbdc4;
+  }
+  h4 {
+    font-size: larger;
+  }
+    }
