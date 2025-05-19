@@ -335,6 +335,10 @@ header {
     min-width: 100%;
   }
 
+  .testimonials .btn {
+    width: 20px;
+    height: 20px;
+
   .personality-container {
     font-size: 50%;
     display: -webkit-grid;
