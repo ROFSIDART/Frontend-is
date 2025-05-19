@@ -1,18 +1,30 @@
 html {
   scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
 }
 
 /* увеличение кнопок при наведении. */
 header {
   a {
+    -webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;
   }
-.navigation-desctop {
+}
 
+.navigation-desktop {
   a:hover {
     margin: 0 1em 0;
     padding: 4px 10px;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     transform: scale(1.2);
+    -webkit-animation: animation_RGB 5s ease infinite;
+    -moz-animation: animation_RGB 5s ease infinite;
+    -o-animation: animation_RGB 5s ease infinite;
     animation: animation_RGB 5s ease infinite;
     border: 1.5px solid #ffffff;
     font-weight: bold;
@@ -20,14 +32,19 @@ header {
     color: #ffffff;
   }
 }
-}
 
 /* анимация для слова фронтенд */
 #frontend_is {
   h3 {
     border-radius: 1em;
     padding: 0.1em 0.2em;
+    -webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;
+    -webkit-animation: animation_RGB 5s ease infinite;
+    -moz-animation: animation_RGB 5s ease infinite;
+    -o-animation: animation_RGB 5s ease infinite;
     animation: animation_RGB 5s ease infinite;
   }
 
@@ -37,81 +54,128 @@ header {
   }
 }
 
-/* радужная анимация  */
+/* радужная анимация */
+@-webkit-keyframes animation_RGB {
+  0% { background: none; }
+  10% { background-color: #c21414; color: #ffffff; }
+  30% { background-color: #cfc20d; color: #000; }
+  50% { background-color: #3dc214; color: #000; }
+  60% { background-color: #146ec2; color: #ffffff; }
+  80% { background-color: #6e14c2; color: #ffffff; }
+  100% { background-color: #c21497; }
+}
+@-moz-keyframes animation_RGB {
+  0% { background: none; }
+  10% { background-color: #c21414; color: #ffffff; }
+  30% { background-color: #cfc20d; color: #000; }
+  50% { background-color: #3dc214; color: #000; }
+  60% { background-color: #146ec2; color: #ffffff; }
+  80% { background-color: #6e14c2; color: #ffffff; }
+  100% { background-color: #c21497; }
+}
+@-o-keyframes animation_RGB {
+  0% { background: none; }
+  10% { background-color: #c21414; color: #ffffff; }
+  30% { background-color: #cfc20d; color: #000; }
+  50% { background-color: #3dc214; color: #000; }
+  60% { background-color: #146ec2; color: #ffffff; }
+  80% { background-color: #6e14c2; color: #ffffff; }
+  100% { background-color: #c21497; }
+}
 @keyframes animation_RGB {
-  0% {
-    background: none;
-  }
-  10% {
-    background-color: #c21414;
-    color: #ffffff;
-  }
-  30% {
-    background-color: #cfc20d;
-    color: #000;
-  }
-  50% {
-    background-color: #3dc214;
-    color: #000;
-  }
-  60% {
-    background-color: #146ec2;
-    color: #ffffff;
-  }
-  80% {
-    background-color: #6e14c2;
-    color: #ffffff;
-  }
-  100% {
-    background-color: #c21497;
-  }
+  0% { background: none; }
+  10% { background-color: #c21414; color: #ffffff; }
+  30% { background-color: #cfc20d; color: #000; }
+  50% { background-color: #3dc214; color: #000; }
+  60% { background-color: #146ec2; color: #ffffff; }
+  80% { background-color: #6e14c2; color: #ffffff; }
+  100% { background-color: #c21497; }
 }
 
-/* зеленая анмация рамки */
+/* зеленая анимация рамки */
+@-webkit-keyframes border_RGB {
+  0% { border: 1px solid #000000; }
+  70% { border: 1px solid #ffffff; }
+  90% { border: 1px solid #1eff00; }
+  100% { border: 1px solid #273a1b; }
+}
+@-moz-keyframes border_RGB {
+  0% { border: 1px solid #000000; }
+  70% { border: 1px solid #ffffff; }
+  90% { border: 1px solid #1eff00; }
+  100% { border: 1px solid #273a1b; }
+}
+@-o-keyframes border_RGB {
+  0% { border: 1px solid #000000; }
+  70% { border: 1px solid #ffffff; }
+  90% { border: 1px solid #1eff00; }
+  100% { border: 1px solid #273a1b; }
+}
 @keyframes border_RGB {
-  0% {
-    border: 1px solid #000000;
-  }
-  70% {
-    border: 1px solid #ffffff;
-  }
-  90% {
-    border: 1px solid #1eff00;
-  }
-  100% {
-    border: 1px solid #273a1b;
-  }
+  0% { border: 1px solid #000000; }
+  70% { border: 1px solid #ffffff; }
+  90% { border: 1px solid #1eff00; }
+  100% { border: 1px solid #273a1b; }
 }
 
+@-webkit-keyframes opticy {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
+@-moz-keyframes opticy {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
+@-o-keyframes opticy {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
+}
 @keyframes opticy {
-  0% {opacity: 0%;}
-  100% {opacity: 100%;}
-
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
 }
 
-/* добавление анимации рамок для направлений в фронтенде */
+/* добавление анимации рамок для направлений во фронтенде */
 #direction {
   #article-1 {
+    -webkit-animation: border_RGB 5s ease infinite;
+    -moz-animation: border_RGB 5s ease infinite;
+    -o-animation: border_RGB 5s ease infinite;
     animation: border_RGB 5s ease infinite;
   }
-
   #article-2 {
+    -webkit-animation: border_RGB 5.1s ease infinite;
+    -moz-animation: border_RGB 5.1s ease infinite;
+    -o-animation: border_RGB 5.1s ease infinite;
     animation: border_RGB 5.1s ease infinite;
   }
-
   #article-3 {
+    -webkit-animation: border_RGB 5.2s ease infinite;
+    -moz-animation: border_RGB 5.2s ease infinite;
+    -o-animation: border_RGB 5.2s ease infinite;
     animation: border_RGB 5.2s ease infinite;
   }
   #article-4 {
+    -webkit-animation: border_RGB 5.3s ease infinite;
+    -moz-animation: border_RGB 5.3s ease infinite;
+    -o-animation: border_RGB 5.3s ease infinite;
     animation: border_RGB 5.3s ease infinite;
   }
-  /* анимация при наведении  */
+
+  /* анимация при наведении */
   p {
+    -webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;
   }
   p:hover {
     margin: 1em;
     padding: 0.1em 0.5em;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
   }
 }
@@ -119,61 +183,72 @@ header {
 .testimonials .btn:hover {
   background-color: #ffffff;
   cursor: pointer;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
   transform: scale(1.2);
   font-size: x-large;
 }
 
 /* адаптация под разные экраны */
 @media (min-width: 431px) {
-  .navigation-mobail {
+  .navigation-mobile {
     display: none;
   }
 }
 
 @media (max-width: 430px) {
-  .navigation-desctop {
+  .navigation-desktop {
     display: none;
   }
 
-  .navigation-mobail {
-    button{
-      div {
-        display: none;
-      }
+  .navigation-mobile {
+    button div {
+      display: none;
     }
     button:focus {
       opacity: 100%;
       div {
         display: block;
+        -webkit-animation: opticy 1s ease-out 1;
+        -moz-animation: opticy 1s ease-out 1;
+        -o-animation: opticy 1s ease-out 1;
         animation: opticy 1s ease-out 1;
       }
-      
     }
     a:hover {
       background-color: #6ec201;
       color: #000;
     }
   }
+
   #img_header {
     margin: 5px;
+    display: -webkit-grid;
+    display: -moz-grid;
     display: grid;
+    -webkit-grid-template-columns: 2fr 1fr;
+    -moz-grid-template-columns: 2fr 1fr;
     grid-template-columns: 2fr 1fr;
+    -webkit-align-items: end;
+    -moz-align-items: end;
     align-items: end;
+  }
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+  #img_header img {
+    max-width: 100%;
+    height: auto;
+  }
 
-    #chtotividish {
-      width: auto;
-      margin: 0;
-    }
+  #chtotividish {
+    width: auto;
+    margin: 0;
+  }
 
-    #v_internete {
-      margin: 0;
-      width: auto;
-    }
+  #v_internete {
+    margin: 0;
+    width: auto;
   }
 
   #frontend_is {
@@ -181,46 +256,61 @@ header {
     border-radius: 2em;
     padding: 1em;
     margin: 4em 1em 1em;
-
-    h3,
-    p {
-      font-size: 80%;
-      display: inline;
-    }
-
-    h3:hover {
-      padding: 0 0.3em;
-      font-size: 100%;
-    }
   }
+
+  #frontend_is h3,
+  #frontend_is p {
+    font-size: 80%;
+    display: inline;
+  }
+
+  #frontend_is h3:hover {
+    padding: 0 0.3em;
+    font-size: 100%;
+  }
+
   .direction {
     font-size: large;
   }
+
   .container-direction {
     background-color: #3a3d42;
     border-radius: 1rem;
     padding: 0;
+  }
 
-    #direction {
-      grid-template-columns: repeat(4, 60%);
-      margin: 0;
-    }
+  #direction {
+    display: -webkit-grid;
+    display: -moz-grid;
+    display: grid;
+    -webkit-grid-template-columns: repeat(4, 60%);
+    -moz-grid-template-columns: repeat(4, 60%);
+    grid-template-columns: repeat(4, 60%);
+    margin: 0;
+  }
 
-    .scroller-direction {
-      padding: 1em;
-      display: flex;
-      overflow: hidden;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-    }
+  .scroller-direction {
+    padding: 1em;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-scroll-snap-type: x mandatory;
+    -moz-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+  }
 
-    article {
-      font-size: 80%;
-      scroll-snap-align: center;
-    }
+  article {
+    font-size: 80%;
+    scroll-snap-align: center;
   }
 
   .eyes {
+    -webkit-scale: 0.5;
+    -moz-scale: 0.5;
     scale: 0.5;
     margin: 0 0 5em;
   }
@@ -228,6 +318,9 @@ header {
   #where_to_work {
     font-size: large;
   }
+
+/* ... (предыдущий код остаётся без изменений) ... */
+
   .where_to_work {
     .where_to_work-p {
       margin: -1em 0 1.5em;
@@ -242,7 +335,14 @@ header {
 
   .personality-container {
     font-size: 50%;
-    grid-template-columns:  1fr;
+    display: -webkit-grid;
+    display: -moz-grid;
+    display: grid;
+    -webkit-grid-template-columns: 1fr;
+    -moz-grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-grid-template-rows: auto;
+    -moz-grid-template-rows: auto;
     grid-template-rows: auto;
   }
 }
