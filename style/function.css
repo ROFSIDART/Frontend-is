@@ -320,9 +320,7 @@ header {
   #where_to_work {
     font-size: large;
   }
-
-/* ... (предыдущий код остаётся без изменений) ... */
-
+  
   .where_to_work {
     .where_to_work-p {
       margin: -1em 0 1.5em;
@@ -336,8 +334,8 @@ header {
   }
 
   .testimonials .btn {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
 
   .personality-container {
     font-size: 50%;
