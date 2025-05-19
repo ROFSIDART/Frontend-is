@@ -248,7 +248,10 @@ header {
     height: 40px;
     position: absolute;
     top: 90%;
+    z-infex: 10;
 
+    padding: 15px;
+    
     color: #000;
     background-color: #9d9ea7;
     border-radius: 5rem;
